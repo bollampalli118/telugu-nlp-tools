@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# Telugu Word Analysis for LLM Training
 
 This repository contains an \*\*R script\*\* to process and analyze
@@ -37,3 +38,7 @@ This cleaned and structured word dataset is intended to \*\*train or
 fine-tune an LLM\*\* for:  - Writing Telugu news in Eenadu style.  -
 Translating news into Telugu while maintaining the editorial tone and
 style.
+=======
+# Telugu_word_analysis_for_train_LLM
+This repository contains an R script to process and analyze Telugu news text data, specifically for preparing training data for a custom LLM (Large Language Model) aimed at generating or translating Telugu news in Eenadu style.
+>>>>>>> a7efa39fe20b0bd5c1930e12e92f5f8a83dcc8f6
