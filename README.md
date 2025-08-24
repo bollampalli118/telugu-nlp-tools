@@ -10,51 +10,46 @@ The main script processes CSV files, removes English words, and outputs word cou
 ## Folder Structure
 
 telugu-nlp-tools/
-│
-├── CSV files placed on Desktop or any folder (as per folder_path in script)
-├── scripts/
-│ └── words_data.R # The R script
-└── README.md # Project description and usage
+  data/
+    raw/          # Place all input CSVs here
+  results/        # Output CSVs will be saved here automatically
+  scripts/
+    words_data.R  # The R script
+  README.md       # Project description and usage
 
 ---
 
 ## Dependencies
-You need R installed. Install required packages:
+You need R installed. Then install the required packages by running:
 
-```r
 install.packages(c("dplyr", "tidyverse", "tidytext"))
-Usage
-Place all your CSV files in a folder (currently the script uses Desktop path):
 
-r
-Copy
-Edit
-"C:/Users/DELL/Desktop/EXAMPLES"
-Run the script:
+---
 
-r
-Copy
-Edit
+## Usage
+1. Place all your CSV files in the data/raw/ folder.
+2. Run the script:
+
 source("scripts/words_data.R")
-Outputs
-The script saves the following CSV files on your Desktop:
 
-unique_word_counts.csv → all words with their counts
+---
 
-non_english_words.csv → removes words with only English letters
+## Outputs
+The script saves the following CSV files in the results/ folder:
 
-top_50_telugu_words.csv → top 50 Telugu words by frequency
+- unique_word_counts.csv → all words with their counts  
+- non_english_words.csv → removes words with only English letters  
+- top_50_telugu_words.csv → top 50 Telugu words by frequency  
 
 It also prints in the R console:
 
-Total unique words
+- Total unique words  
+- Total English words  
+- Total Telugu words  
+- Top 50 Telugu words
 
-Total English words
+---
 
-Total Telugu words
-
-Top 50 Telugu words
-
-Notes
-Ensure each CSV has a body column containing the text.
-The script currently uses a fixed Desktop path; change folder_path in words_data.R if needed.
+## Notes
+- Ensure each CSV has a body column containing the text.  
+- The results/ folder is created automatically if it does not exist.
