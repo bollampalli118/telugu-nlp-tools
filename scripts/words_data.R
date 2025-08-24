@@ -35,7 +35,7 @@ word_counts <- all_data %>%
   arrange(desc(count))
 
 # Save all unique words with counts
-write.csv(word_counts, "C:/Users/DELL/OneDrive - Asianxt Digital Technologies Pvt Ltd/Desktop/unique_word_counts.csv", row.names = FALSE)
+write.csv(word_counts, "C:/Users/DELL/Desktop/unique_word_counts.csv", row.names = FALSE)
 
 # Preview
 head(word_counts, 20)
@@ -72,7 +72,7 @@ non_english_words <- word_counts %>%
 head(non_english_words, 20)
 
 # Optional: save the cleaned list to a file
-write.csv(non_english_words, "C:/Users/DELL/OneDrive - Asianxt Digital Technologies Pvt Ltd/Desktop/non_english_words.csv", row.names = FALSE)
+write.csv(non_english_words, "C:/Users/DELL/Desktop/non_english_words.csv", row.names = FALSE)
 
 
 library(dplyr)
