@@ -1,7 +1,7 @@
 # telugu-nlp-tools
 
 ## Overview
-This repository contains tools to analyze Telugu news articles. It extracts unique words and their frequencies from multiple news CSVs, helping in Telugu NLP tasks like text analysis and LLM training.
+This repository contains tools to analyze Telugu news articles. It extracts unique words and their frequencies from multiple CSVs, helping in Telugu NLP tasks like text analysis and LLM training.
 
 The main script processes CSV files, removes English words, and outputs word counts and top words.
 
@@ -11,12 +11,9 @@ The main script processes CSV files, removes English words, and outputs word cou
 
 telugu-nlp-tools/
 │
-├── data/
-│ ├── raw/ # Original CSVs by category
-│ └── processed/ # Optional: cleaned/intermediate outputs
-│
-├── results/ # Final analysis outputs (e.g., top words)
-├── scripts/ # R scripts (words_data.R)
+├── CSV files placed on Desktop or any folder (as per folder_path in script)
+├── scripts/
+│ └── words_data.R # The R script
 └── README.md # Project description and usage
 
 yaml
@@ -29,41 +26,40 @@ Edit
 You need R installed. Install required packages:
 
 ```r
-install.packages(c("tidyverse", "tidytext"))
+install.packages(c("dplyr", "tidyverse", "tidytext"))
 Usage
-Run the main script:
+Place all your CSV files in a folder (currently the script uses Desktop path):
+
+r
+Copy
+Edit
+"C:/Users/DELL/OneDrive - Asianxt Digital Technologies Pvt Ltd/Desktop/EXAMPLES"
+Run the script:
 
 r
 Copy
 Edit
 source("scripts/words_data.R")
-This will generate output files in the results/ folder such as:
+Outputs
+The script saves the following CSV files on your Desktop:
 
-unique_word_counts.csv
+unique_word_counts.csv → all words with their counts
 
-top_50_telugu_words.csv
+non_english_words.csv → removes words with only English letters
 
-non_english_words.csv
+top_50_telugu_words.csv → top 50 Telugu words by frequency
 
-Example Output
-arduino
-Copy
-Edit
-# unique_word_counts.csv
-word,count
-తెలుగు,1200
-క్రికెట్,950
-న్యూస్,870
+It also prints in the R console:
+
+Total unique words
+
+Total English words
+
+Total Telugu words
+
+Top 50 Telugu words
+
 Notes
-Place all original CSVs inside data/raw/ before running the script.
+Ensure each CSV has a body column containing the text.
 
-Results will automatically go into the results/ folder.
-
-Suggested GitHub Topics
-Telugu-NLP, R, text-mining, word-frequency
-
-vbnet
-Copy
-Edit
-
-✅ This is clean, professional, and ready to add to your repo.  
+The script currently uses a fixed Desktop path; change folder_path in words_data.R if needed.
