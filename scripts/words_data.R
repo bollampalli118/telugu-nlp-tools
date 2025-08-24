@@ -7,7 +7,7 @@ library(tidyverse)
 library(tidytext)
 
 # Folder path
-folder_path <- "C:/Users/DELL/OneDrive - Asianxt Digital Technologies Pvt Ltd/Desktop/EXAMPLES"
+folder_path <- "C:/Users/DELL/Desktop/EXAMPLES"
 
 # Get all CSV file paths
 files <- list.files(folder_path, pattern = "*.csv", full.names = TRUE)
