@@ -16,10 +16,6 @@ telugu-nlp-tools/
 │ └── words_data.R # The R script
 └── README.md # Project description and usage
 
-yaml
-Copy
-Edit
-
 ---
 
 ## Dependencies
@@ -33,7 +29,7 @@ Place all your CSV files in a folder (currently the script uses Desktop path):
 r
 Copy
 Edit
-"C:/Users/DELL/OneDrive - Asianxt Digital Technologies Pvt Ltd/Desktop/EXAMPLES"
+"C:/Users/DELL/Desktop/EXAMPLES"
 Run the script:
 
 r
@@ -61,5 +57,4 @@ Top 50 Telugu words
 
 Notes
 Ensure each CSV has a body column containing the text.
-
 The script currently uses a fixed Desktop path; change folder_path in words_data.R if needed.
