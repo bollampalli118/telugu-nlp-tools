@@ -20,17 +20,20 @@ telugu-nlp-tools/
 ---
 
 ## Dependencies
-You need R installed. Then install the required packages by running:
+You need R installed. Install the required packages by running:
 
 install.packages(c("dplyr", "tidyverse", "tidytext"))
 
 ---
 
 ## Usage
-1. Place all your CSV files in the data/raw/ folder.
+1. Place all your CSV files in the data/raw/ folder.  
+   - Each CSV must contain a column named `body` with the text.  
 2. Run the script:
 
 source("scripts/words_data.R")
+
+The script will automatically create the results/ folder if it does not exist.
 
 ---
 
@@ -51,5 +54,7 @@ It also prints in the R console:
 ---
 
 ## Notes
-- Ensure each CSV has a body column containing the text.  
-- The results/ folder is created automatically if it does not exist.
+- Remove redundant head() or library(dplyr) calls in your script for cleaner execution.  
+- The script is designed to handle invalid or empty CSV files gracefully.  
+- Always check that CSVs in data/raw/ have the correct body column.  
+- This setup is fully repo-friendly and avoids hardcoded Desktop/OneDrive paths.
